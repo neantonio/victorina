@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*{
+    font-family: roboto;
+}
+.mat-raised-button{
+    margin:5px !important;
+}
+.mat-fab{
+    margin:5px !important;
+}
+.body-wrapper{
+        height: 96vh;
+    margin: 0;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column.v-align-center{
+    justify-content: center
+}
+.column.h-align-center{
+    align-content: center;
+    align-items: center;
+}
+
+.column.v-align-end{
+    justify-content: flex-end
+}
+.column.h-align-end{
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.space-between{
+    justify-content: space-between
+}
+.row.h-align-end{
+    justify-content: flex-end
+}
+.row.h-align-start{
+    justify-content: flex-start
+}
+.row.h-align-center{
+    justify-content: center;
+}
+
+
+.absolute-position{
+    position: absolute;
+}
+.absolute-position.bottom{
+    bottom: 0;
+}
+.relative-position{
+    position: relative
+}
+
+.container{
+    width:50%;
+}
+
+.full-width{
+    width: 100%;
+}
+.full-height{
+    height: 100%;
+}
+
+.full-width-screen{
+    width: 100vw;
+}
+.full-height-screen{
+    height: 100vh;
+}
+
+.half-width{
+    width: 50%;
+}
+.half-height{
+    height: 50%;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.card{
+    margin:10px 20px;
+    width:50%;
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.card img{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .container{
+      width:100%;
+  }
+  .card{
+      width:100%;
+       margin:10px 0;
+  }
+  .mat-fab{
+      width:30px !important;
+      height:30px!important;
+      line-height: 31px !important;
+  }
+  .mat-fab span{
+      padding:0 !important;
+  }
+}
+
+
+

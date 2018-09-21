@@ -1,0 +1,21 @@
+<div class='row h-align-start'>
+  <button *ngIf='!myRouter.onMainPage' mat-raised-button color=primary (click)='myRouter.toMainPage()'>{{'to_main_menu'|translate}}</button>
+</div>
+
+<div class='row h-align-center game-wrapper'>
+  <div class='wrapper' [style.width]="getWrapperWidth()+'px'" [style.height]="getWrapperHeight()+'px'">
+    <div *ngFor='let item1 of verticalSquareItems;let i=index' class='image-row' [style.height]="getItemHeight()+'px'">
+
+      <div *ngFor='let item2 of  horisontalSquareItems;let j=index' [style.width]="getItemWidth()+'px'" [class.transition]='useTransition'
+        class='image-item' (click)='rotateItem(i,j,$event)'  [style.transform]="'rotate('+getItemRotation(i,j)+'deg)'">
+
+        <img src='assets/public/img/temp.jpg' [style.left]="-100*j+'%'" [style.top]="-100*i+'%'" >
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<mat-progress-bar class="full-width" [color]="'primary'" [mode]="'determinate'" [value]="getProgressValue()">
+</mat-progress-bar>

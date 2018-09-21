@@ -1,0 +1,41 @@
+<div class='column'>
+    <div class='row h-align-end'>
+        <mat-form-field>
+            <mat-select [(value)]="languageService.selectedLanguage">
+                <mat-option *ngFor='let language of languageService.availableLanguages' [value]='language'>{{language.description}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class='card-wrapper row'>
+        <div class='column card space-between'>
+            <div>
+                <img src='assets/public/img/title1.jpg'>
+            </div>
+
+            <div class='row space-between'>
+
+                <button mat-button (click)='onHowToPlay()'>{{'how_play'|translate}}</button>
+                <button mat-raised-button [color]="'primary'" (click)='onBeginNewGame()'>{{'begin_game'|translate}}</button>
+
+
+            </div>
+        </div>
+
+        <div class='column card space-between'>
+            <div>
+                <img src='assets/public/img/title2.JPG'>
+            </div>
+
+            <div class='row space-between'>
+
+                <button mat-button (click)='onHowToPlay2()'>{{'how_play'|translate}}</button>
+                <button mat-raised-button [color]="'primary'" (click)='onBeginGame2()'>{{'begin_game'|translate}}</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+</div>

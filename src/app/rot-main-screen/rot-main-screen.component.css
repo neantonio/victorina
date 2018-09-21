@@ -1,0 +1,26 @@
+.image-item{
+    border:1px solid black;
+    overflow: hidden;
+}
+.image-row{
+  
+   display: flex
+}
+.wrapper{
+        width: 50vw;
+    height: 50vh;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-item img{
+    position: relative;
+}
+.transition{
+    transition: 0.3s
+}
+
+.game-wrapper{
+    margin: 10px 0;
+}

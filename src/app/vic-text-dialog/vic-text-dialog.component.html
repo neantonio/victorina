@@ -1,0 +1,9 @@
+<div *ngFor='let itemGroup of itemGroups' class='group-wrapper' [style.justify-content]='itemGroup.align' [style.direction]='itemGroup.direction' [style.width]='itemGroup.width'>
+  
+  <div  *ngFor='let item of itemGroup.items' class='item-wrapper'>
+
+    <button *ngIf="item.type=='button'" mat-raised-button (click)='onItemClick(item)'>{{item.textValue|translate}}</button>
+    <div *ngIf="item.type=='text'">{{item.textValue|translate}} </div>
+
+  </div>
+</div>

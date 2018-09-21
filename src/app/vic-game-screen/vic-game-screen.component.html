@@ -1,0 +1,41 @@
+<div class='full-width full-height relative-position'>
+
+  <div class='absolute-position'>
+    <button *ngIf='!myRouter.onMainPage' mat-raised-button color=primary (click)='myRouter.toMainPage()'>{{'to_main_menu'|translate}}</button>
+  </div>
+
+  <div class='full-width half-height'>
+    <vic-scene></vic-scene>
+  </div>
+  <div class='column align-right'>
+    <div class='small-text' *ngFor='let text of gameLimitText'>{{text}}</div>
+  </div>
+
+  <mat-progress-bar class="full-width" [color]="'primary'" [mode]="'determinate'" [value]="getProgressValue()">
+  </mat-progress-bar>
+
+  <div class='column full-width  button-wrapper'>
+    <button mat-raised-button *ngFor='let variant of gameItem.variants;let i=index' (click)='onSelectVariant(variant)' [color]='getButtonColor(i)'
+      [disabled]='isButtonGrey(variant)'>{{variant}}</button>
+  </div>
+
+  <div class='row space-between  absolute-position bottom full-width'>
+
+    <button mat-raised-button (click)='onPause()'>{{'pause'|translate}}</button>
+
+    <div class='tip-wrapper  '>
+
+      <div class='column v-align-center uppercase tip-label'>{{'tips'|translate}}:</div>
+
+      <div class='row'>
+        <button mat-fab *ngFor='let tip of avilableTips' [color]="isTipUsed(tip)? 'primary':'default'" [disabled]='isButtonDisabled(tip)'
+          (click)='useTip(tip)' [matTooltip]="tip.description.advice">
+            <mat-icon aria-label="Example icon-button with a heart icon">{{tip.icon}}</mat-icon>
+      </button>     
+    </div>
+
+  </div>
+
+
+</div>
+</div>

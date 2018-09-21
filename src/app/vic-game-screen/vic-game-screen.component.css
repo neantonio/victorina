@@ -1,0 +1,18 @@
+.tip-label{
+    margin-right: 30px;
+}
+.button-wrapper{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tip-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    .tip-wrapper{
+        flex-direction: column;
+    }
+}
